@@ -1,3 +1,7 @@
+#Inez Salazar
+#HW 4.1
+#CHANGELOG:
+# -added red_text, new pattern, couldnt get the output tot correctly display "Big Red", its showing 'was' as subject
 import spacy
 from spacy.matcher import Matcher
 from spacy.util import filter_spans
