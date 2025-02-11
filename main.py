@@ -22,12 +22,11 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_)
 
 pattern = [
-    {"POS": "PROPN","OP": "*"},
+    {"POS": "PROPN"},
+    {"POS": {"IN": ["PUNCT", ]},"OP": "*"},
     {"LEMMA": "be"},
     {"LOWER": "a"},
-    {"POS": {"IN": ["NOUN", "ADJ"]}, "OP": "*"},
-    {"POS": {"IN": ["NOUN", "PROPN"]}, "OP": "+"},
-
+    {"POS": {"IN": ["ADJ", "NOUN", "PROPN"]}, "OP": "+"},
 ]
 #add rule above
 matcher.add("is_a_relationship", [pattern])
